@@ -1,0 +1,75 @@
+body {
+  background-color: #e8e8e8d0;
+  padding: 20px;
+  margin: 0;
+}
+div.curriculo_inteiro {
+  margin-top: 5px;
+  border: 10px solid #ffffff;
+  padding: 20px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  width: 70%;
+  margin: 0 auto;
+}
+div.contato1 {
+  color: rgb(0, 60, 255);
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+}
+div.contato2 {
+  color: rgb(0, 60, 255);
+  display: flex;
+  justify-content: space-between;
+}
+#important {
+  color: rgb(0, 60, 255);
+  margin: 0;
+}
+
+#lessimportant {
+  color: rgb(0, 140, 255);
+}
+#important[type="hr"],
+hr#important {
+  border-color: rgb(0, 132, 255);
+}
+p {
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  color: #666;
+}
+p#data {
+  color: #66666657;
+}
+h2 {
+  color: #666666;
+}
+h3 {
+  color: #666666;
+}
+#titulo {
+  color: rgb(0, 60, 255);
+  border-left: 3px solid #1e73ff;
+  padding-left: 12px;
+  color: #1e73ff;
+  font-weight: 600;
+}
+#Nome {
+  color: rgb(0, 60, 255);
+  padding-left: 12px;
+  color: #1e73ff;
+  font-weight: 600;
+  text-align: center;
+}
+a {
+  color: #1e73ff;
+}
+ul {
+  color: #1e73ff;
+}
+div.separador {
+  border: 1px solid #1e73ff;
+}
