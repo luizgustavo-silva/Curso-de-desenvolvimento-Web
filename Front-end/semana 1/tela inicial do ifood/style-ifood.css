@@ -1,5 +1,6 @@
 a {
   text-decoration: none;
+  color: inherit;
 }
 .subtitle {
   font-size: 30px;
@@ -10,12 +11,17 @@ a {
   box-sizing: border-box;
 }
 .all-container {
-  font-family: Arial, sans-serif;
+  font-family:
+    iFood RC Titulos,
+    iFood RC Textos,
+    helvetica,
+    sans-serif;
   background-color: #f5f5f5;
   color: #333;
 }
 .ifood {
   width: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .main-nav {
@@ -52,6 +58,7 @@ a {
 .title {
   text-align: center;
   margin-top: 80px;
+  padding-bottom: 80px;
 }
 .title p {
   font-size: 15px;
@@ -66,15 +73,20 @@ a {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
   text-align: left;
-  flex: 1 1 320px;
-  border-radius: 8px;
-  padding: 80px;
+  padding: 24px;
+  border-radius: 24px;
+  width: 40%;
+  height: 214px;
+
   transition:
     background-color 0.3s ease,
     transform 0.25s ease;
+  gap: 40px;
+  background-image: url(../../assets/restaurant-hamburguer.webp);
+  background-repeat: no-repeat;
+  background-position: bottom right; /* controls width */
 }
 .restaurant-container:hover {
   background-color: #ea1d2c;
@@ -86,26 +98,50 @@ a {
   font-size: 20px;
 }
 .restaurant-container-options {
-  background-color: #ea1d2c;
+  background-color: #0000004b;
+  box-shadow: 0 2px 4px rgba(26, 118, 204, 0.3);
   border-radius: 8px;
+  padding: 10px 16px;
+  align-self: flex-start;
+}
+.restaurant-title {
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .market-container {
   background-color: #b6d048;
-  color: #111;
+  color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px;
-  flex: 1 1 320px;
-  border-radius: 8px;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 20px;
+  gap: 40px;
+  width: 40%;
+  height: 214px;
+  border-radius: 24px;
   transition:
     background-color 0.3s ease,
     transform 0.25s ease;
+  background-image: url(../../assets/market-photo.avif);
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 .market-container:hover {
   background-color: #b6d048;
   transform: translateY(-4px);
+}
+.market-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+.market-container-options {
+  background-color: #0000004b;
+  box-shadow: 0 2px 4px rgba(26, 118, 204, 0.3);
+  border-radius: 8px;
+  padding: 10px 16px;
+  align-self: flex-start;
 }
 
 .all-content-container {
@@ -135,9 +171,30 @@ a {
   padding: 14px;
   color: #fff;
 }
-.footer {
+.search-button {
+  background-color: #ea1d2c;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.address-button {
+  border: none;
+  padding: 22px;
+  border-radius: 3px;
+  outline: none;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 14px;
+}
+.container-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  text-align: center;
+  align-items: bottom;
+  width: 100%;
   gap: 40px;
   padding: 20px;
   background-color: #f5f5f5;
