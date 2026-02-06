@@ -9,18 +9,19 @@
   <body>
     <div class="container_all">
       <div class="container_principal" id="container_principal">
+        <img>
         <h1 class="title">Calculator IMC</h1>
         <p>Discover your body mass index.</p>
 
-        <label for="height">Altura</label>
+        <label for="height">Height</label>
         <input type="number" class="input" id="height" placeholder="m" />
-        <label for="weight">Peso</label>
+        <label for="weight">Weight</label>
         <input type="number" class="input" id="weight" placeholder="kg" />
         <button class="botao-calcular" onclick="(exibirIMC())">Calculate</button>
 
-        <button class="clear">Limpar</button>
+        <button class="clear" type="button">Clear</button>
         <div class="result" id="result">
-          <p>Seu imc eh</p>
+          <p>Your imc is</p>
           <p id="imc-value">labubu</p>
           <p id="imc-category">gordo</p>
         </div>
