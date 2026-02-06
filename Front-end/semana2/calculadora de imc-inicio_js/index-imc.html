@@ -1,259 +1,66 @@
+<!DOCTYPE html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMC</title>
-    <script src="imcprof.js"></script>
-    <style>
-      body {
-        background-color: #e1e9f0;
-        font-family: Arial,sans-serif;
-      }
-
-      .container_principal {
-        background-color: #e1e9f0;
-        width: 400px;
-        max-width: 90%;
-        border-radius: 4px;
-        margin: 40px auto;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        padding: 20px;
-      }
-      .title {
-        font-size: 32px;
-        color: #3e3e3e;
-        font-weight: bold;
-      }
-      h1,
-      p {
-        margin: 0;
-      }
-      .description {
-        font-size: 18px;
-        color: #3e3e3e;
-      }
-      label {
-        font-size: 16px;
-        font-weight: bold;
-      }
-      .input {
-        width: 100%;
-        height: 34px;
-        margin-top: 10px;
-        border: 1px solid #ffffffb2;
-        border-radius: 8px;
-        outline: none;
-        padding-left: 2px;
-
-        font-size: 18px;
-        color: gray;
-        margin-bottom: 10px;
-      }
-      .input:focus {
-        border: 2px solid #0d998646;
-
-      }
-      .input::placeholder {
-        text-align: right;
-        padding: 12px;
-        font-size: 14px;
-      }
-      .botao-calcular {
-        width: 80%;
-        height: 32px;
-        border-radius: 4px;
-        border: none;
-        background: linear-gradient(135deg, #0d9986a4, #0d9987);
-        box-shadow:
-          rgba(0, 0, 0, 0.25) 0px 54px 55px,
-          rgba(0, 0, 0, 0.12) 0px -12px 30px,
-          rgba(0, 0, 0, 0.12) 0px 4px 6px,
-          rgba(0, 0, 0, 0.17) 0px 12px 13px,
-          rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      }
-      .result {
-        height: 35%;
-        width: 100%;
-        margin-top: 20px;
-        border: #0d9987 solid 2px;
-        border-radius: 8px;
-        background-color: white;
-        text-align: center;
-      }
-      .clear {
-        border: none;
-        border-radius: 8px;
-        height: 32px;
-        width: 15%;
-        margin-left: 10px;
-      }
-      .classification-table {
-        margin-top: 60px;
-        width: 442px;
-        max-width: 90%;
-        margin: 40px auto;
-        background-color: #e1e9f0;
-        border-radius: 12px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      }
-      .classification-table-title {
-        text-align: left;
-        padding: 10px;
-      }
-      table {
-      width: 100%;
-      border-collapse: collapse;
-      color: #0e0e0e;
-}
-
-  td {
-  padding: 10px;
-  padding-bottom: 5px;
-
-}
-
-td:first-child {
-  text-align: left;
-}
-
-td:last-child {
-  text-align: right;
-}
-tr {
-  border: 1px solid #ddd;
-}
-.have-circle-blue, .have-circle-green, .have-circle-yellow, .have-circle-orange, .have-circle-lowred, .have-circle-red {
-  position: relative;
-  padding-left: 18px;
-  padding: 15px;
-}
-
-.have-circle-blue::before {
-  background: #088ce4;
-   content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.have-circle-green::before {
-  background: #0d9987;
-   content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.have-circle-yellow::before {
-  background: #f5a623;
-   content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.have-circle-orange::before {
-  background: #f5a523a4;
-   content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.have-circle-lowred::before {
-  background: #f03d3df6;
-   content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.have-circle-red::before {
-  background: #ff0000;
-   content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-td {
-  height: 40px;
-}
-    </style>
+    <script src="imc.js" defer></script>
+    <link rel="stylesheet" href="style-imc.css" />
   </head>
   <body>
     <div class="container_all">
-    <div class="container_principal">
-      <h1 class="title">Calculator IMC</h1>
-      <p>Discover your body mass index.</p>
+      <div class="container_principal" id="container_principal">
+        <h1 class="title">Calculator IMC</h1>
+        <p>Discover your body mass index.</p>
 
-      <label for="height">Altura</label>
-      <input type="number" class="input" id="height" placeholder="m" />
-      <label for="weight">Peso</label>
-      <input type="number" class="input" id="weight" placeholder="kg" />
-      <button class="botao-calcular" onclick="(calcularIMC(), exibirIMC())">Calculate</button>
-      <button class="clear">Limpar</button>
-      <div class="result">
-        <p>Seu imc eh</p>
-        <h1 id="imc-value">labubu</h1>
-        <h2 id="imc-category">gordo</h2>
-      </div>
+        <label for="height">Altura</label>
+        <input type="number" class="input" id="height" placeholder="m" />
+        <label for="weight">Peso</label>
+        <input type="number" class="input" id="weight" placeholder="kg" />
+        <button class="botao-calcular" onclick="(exibirIMC())">Calculate</button>
+
+        <button class="clear">Limpar</button>
+        <div class="result" id="result">
+          <p>Seu imc eh</p>
+          <p id="imc-value">labubu</p>
+          <p id="imc-category">gordo</p>
+        </div>
       </div>
       <div class="classification-table">
-       <table>
-  <thead>
-    <tr>
-      <th class="classification-table-title">Classification</th>
-    </tr>
-  </thead>
+        <table>
+          <thead>
+            <tr>
+              <th class="classification-table-title">Classification</th>
+            </tr>
+          </thead>
 
-  <tbody>
-    <tr>
-      <td class="have-circle-blue">Lower than 18.5</td>
-      <td>Underweight</td>
-    </tr>
-    <tr>
-      <td class="have-circle-green">18.5 – 24.9</td>
-      <td>Normal weight</td>
-    </tr>
-    <tr>
-      <td class="have-circle-yellow">25 – 29.9</td>
-      <td>Overweight</td>
-    </tr>
-    <tr>
-      <td class="have-circle-orange">30 – 34.9</td>
-      <td>Obesity I</td>
-    </tr>
-    <tr>
-      <td class="have-circle-lowred">35 – 39.9</td>
-      <td>Obesity II</td>
-    </tr>
-    <tr>
-      <td class="have-circle-red">Higher than 40</td>
-      <td>Obesity III</td>
-    </tr>
-  </tbody>
-</table>
+          <tbody>
+            <tr>
+              <td class="have-circle-blue">Lower than 18.5</td>
+              <td>Underweight</td>
+            </tr>
+            <tr>
+              <td class="have-circle-green">18.5 – 24.9</td>
+              <td>Normal weight</td>
+            </tr>
+            <tr>
+              <td class="have-circle-yellow">25 – 29.9</td>
+              <td>Overweight</td>
+            </tr>
+            <tr>
+              <td class="have-circle-orange">30 – 34.9</td>
+              <td>Obesity I</td>
+            </tr>
+            <tr>
+              <td class="have-circle-lowred">35 – 39.9</td>
+              <td>Obesity II</td>
+            </tr>
+            <tr>
+              <td class="have-circle-red">Higher than 40</td>
+              <td>Obesity III</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    
     </div>
   </body>
-
 </html>
