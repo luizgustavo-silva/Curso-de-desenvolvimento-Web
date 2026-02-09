@@ -21,7 +21,7 @@ function exibirIMC() {
     resultBox.style.backgroundColor = "rgba(8, 140, 228, 0.5)";
     resultBox.style.border = "1px solid rgba(0, 0, 0, 0.08)";
     resultValue.style.color = "#088ce4";
-  } else if (imc > 18.5 && imc <= 24.9) {
+  } else if (imc > 18.5 && imc <= 25) {
     resultCategory.innerText = "Normal weight";
     resultCategory.style.color = "#0d9987";
     resultBox.style.backgroundColor = "rgba(13, 153, 135, 0.5)";
