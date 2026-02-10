@@ -17,12 +17,8 @@ function validarAll() {
   const inputEmail = document.getElementById("input-email").value;
   const inputPassword = document.getElementById("input-senha").value;
   if (validarEmail(inputEmail) && validarPassword(inputPassword)) {
-    window.open("https://exemplo.com");
+    window.location.href = "home.html";
   } else {
-    const formulario = document.getElementById("container_formulario");
-    const p = document.createElement("p");
-    p.id = "erro-login";
-    p.textContent = "Senha ou Email incorreto";
-    formulario.appendChild(p);
+    alert("Senha ou Email Incorreto");
   }
 }
