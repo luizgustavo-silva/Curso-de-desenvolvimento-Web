@@ -127,6 +127,7 @@ a {
   align-items: center;
   gap: 8px;
   width: 88%;
+/* align-self: flex-start; */
 }
 .button-signin {
   padding: 15px;
