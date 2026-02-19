@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,68 +6,67 @@
     <title>IMC</title>
     <script src="imc.js" defer></script>
     <link rel="stylesheet" href="style-imc.css" />
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
   <body>
-    <div class="container_all">
-      <i class="fa-solid fa-scale-balanced" style="color: #63E6BE;"></i>
-      <div class="container_principal" id="container_principal">
-        <img>
-        <h1 class="title">Calculator IMC</h1>
-        <p>Discover your body mass index.</p>
+    <form>
+      <div class="container_all">
+        <i class="fa-solid fa-scale-balanced" style="color: #63e6be"></i>
+        <div class="container_principal" id="container_principal">
+          <img />
+          <h1 class="title">Calculator IMC</h1>
+          <p>Discover your body mass index.</p>
 
-        <label for="height"><i class="fa-solid fa-scale-balanced" style="color: #31c99b;"></i> Height</label>
-        <input type="number" class="input" id="height" placeholder="m" />
-        <label for="weight"><i class="fa-solid fa-ruler" style="color: #51d6ae;"></i> Weight</label>
-        <input type="number" class="input" id="weight" placeholder="kg" />
-        <button class="botao-calcular" onclick="(exibirIMC())"><i class="fa-solid fa-calculator" style="color: #51d2ab;"></i> Calculate</button>
+          <label for="height"><i class="fa-solid fa-scale-balanced" style="color: #31c99b"></i> Height</label>
+          <input type="number" class="input" id="height" placeholder="m" />
+          <label for="weight"><i class="fa-solid fa-ruler" style="color: #51d6ae"></i> Weight</label>
+          <input type="number" class="input" id="weight" placeholder="kg" />
+          <button class="botao-calcular" onclick="exibirIMC()"><i class="fa-solid fa-calculator" style="color: #51d2ab"></i> Calculate</button>
 
-        <button class="clear" type="button"><i class="fa-solid fa-arrows-rotate"></i></button>
-        <div class="result" id="result">
-          <p>Your imc is</p>
-          <p id="imc-value">labubu</p>
-          <p id="imc-category">gordo</p>
+          <button class="clear" type="button"><i class="fa-solid fa-arrows-rotate"></i></button>
+          <div class="result" id="result">
+            <p>Your imc is</p>
+            <p id="imc-value">labubu</p>
+            <p id="imc-category">gordo</p>
+          </div>
+        </div>
+        </form>
+        <div class="classification-table">
+          <table>
+            <thead>
+              <tr>
+                <th class="classification-table-title">Classification</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="have-circle-blue">Lower than 18.5</td>
+                <td>Underweight</td>
+              </tr>
+              <tr>
+                <td class="have-circle-green">18.5 – 24.9</td>
+                <td>Normal weight</td>
+              </tr>
+              <tr>
+                <td class="have-circle-yellow">25 – 29.9</td>
+                <td>Overweight</td>
+              </tr>
+              <tr>
+                <td class="have-circle-orange">30 – 34.9</td>
+                <td>Obesity I</td>
+              </tr>
+              <tr>
+                <td class="have-circle-lowred">35 – 39.9</td>
+                <td>Obesity II</td>
+              </tr>
+              <tr>
+                <td class="have-circle-red">Higher than 40</td>
+                <td>Obesity III</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="classification-table">
-        <table>
-          <thead>
-            <tr>
-              <th class="classification-table-title">Classification</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td class="have-circle-blue">Lower than 18.5</td>
-              <td>Underweight</td>
-            </tr>
-            <tr>
-              <td class="have-circle-green">18.5 – 24.9</td>
-              <td>Normal weight</td>
-            </tr>
-            <tr>
-              <td class="have-circle-yellow">25 – 29.9</td>
-              <td>Overweight</td>
-            </tr>
-            <tr>
-              <td class="have-circle-orange">30 – 34.9</td>
-              <td>Obesity I</td>
-            </tr>
-            <tr>
-              <td class="have-circle-lowred">35 – 39.9</td>
-              <td>Obesity II</td>
-            </tr>
-            <tr>
-              <td class="have-circle-red">Higher than 40</td>
-              <td>Obesity III</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
   </body>
 </html>

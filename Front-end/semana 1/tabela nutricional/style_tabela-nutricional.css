@@ -59,3 +59,8 @@ body {
 .tabela_nutricional tr:hover {
   background-color: rgb(255, 255, 255);
 }
+@media(max-width: 800px) {
+  .tabela_nutricional {
+    width: 100%;
+  }
+}
