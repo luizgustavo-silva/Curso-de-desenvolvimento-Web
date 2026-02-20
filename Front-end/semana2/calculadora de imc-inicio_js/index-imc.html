@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMC</title>
-    <script src="imc.js" defer></script>
+    
     <link rel="stylesheet" href="style-imc.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
   <body>
-    <form>
+    <form id="form-imc">
       <div class="container_all">
         <i class="fa-solid fa-scale-balanced" style="color: #63e6be"></i>
         <div class="container_principal" id="container_principal">
@@ -18,10 +18,10 @@
           <p>Discover your body mass index.</p>
 
           <label for="height"><i class="fa-solid fa-scale-balanced" style="color: #31c99b"></i> Height</label>
-          <input type="number" class="input" id="height" placeholder="m" />
+          <input type="number" class="input" id="height" placeholder="m" step="any"/>
           <label for="weight"><i class="fa-solid fa-ruler" style="color: #51d6ae"></i> Weight</label>
-          <input type="number" class="input" id="weight" placeholder="kg" />
-          <button class="botao-calcular" onclick="exibirIMC()"><i class="fa-solid fa-calculator" style="color: #51d2ab"></i> Calculate</button>
+          <input type="number" class="input" id="weight" placeholder="kg" step="any" />
+          <button class="botao-calcular" onclick="exibirIMC()" type="submit" id="btn-calcular"><i class="fa-solid fa-calculator" style="color: #51d2ab"></i> Calculate</button>
 
           <button class="clear" type="button"><i class="fa-solid fa-arrows-rotate"></i></button>
           <div class="result" id="result">
@@ -68,5 +68,6 @@
           </table>
         </div>
       </div>
+      <script src="imc.js" defer></script>
   </body>
 </html>

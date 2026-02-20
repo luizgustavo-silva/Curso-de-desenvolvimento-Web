@@ -1,4 +1,6 @@
 function calcularIMC() {
+  event.preventDefault(); // evitar que o formulario carregue
+  console.log(event);
   const height = Number(document.getElementById("height").value);
   const weight = Number(document.getElementById("weight").value);
 
@@ -7,7 +9,8 @@ function calcularIMC() {
   return weight / (height * height);
 }
 
-function exibirIMC() {
+function exibirIMC(event) {
+  event.preventDefault();
   const imc = calcularIMC();
   const resultValue = document.getElementById("imc-value");
   const resultCategory = document.getElementById("imc-category");
@@ -64,3 +67,5 @@ botaoClear.onclick = function () {
 
   result.classList.remove("show");
 };
+
+document.getElementById("form-imc").addEventListener("submit", exibirIMC);
